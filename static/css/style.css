@@ -1,0 +1,54 @@
+ body {
+    background-color: #FAFAFA;
+    pading-top: 150px;
+    }
+.container-form{
+    max-width: 550px;
+    margin: auto;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    }
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+
+    }
+
+.header-bar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+
+    }
+    label {
+    padding-top: 10px !important;
+    display: block;
+    }
+
+    .button {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 2px;
+    }
+
+    .base-btn {
+
+    margin: 7px 10px 2px 5px;
+    }
+
+    .navbar-brand {
+    padding-left: 15px;
+    }
+
+    .form-btn {
+    text-align: center;
+    margin: 10px;
+    }
+    .container {
+    text-align: left;
+    }

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Bosh sahifa {% endblock title %}
+{% block content %}
+{% if user.is_authenticated %}
+    <br>
+    <p>Salom {{ user.username }}! <br></p>
+    <hr>
+    <a class="btn btn-outline-danger btn-sm" role="button" href="{% url 'logout'%}"> chiqib ketish</a>
+<br>
+{% else %}
+    <br>
+
+    <p>Saytga Kirmagansiz! <a class="btn btn-outline-success btn-sm" role="button" href="{% url 'login' %}">Kirish</a>
+<a class="btn btn-outline-primary btn-sm" role="button" href="{% url 'signup' %}">Ro'yxatdan o'tish</a></p>
+
+    {% endif %}
+ <br/>
+
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Assalomu Alaykum!</h1>
+        <p class="lead"><strong>Temurbek Botirov</strong>ning shaxsiy blogiga xush kelibsiz.</p>
+          <p class="col-md-8 fs-4">Bu yerda siz texnalogiya va dasturlashga oid so'nggi yangiliklardan xabardor bo'lib turasiz.</p>
+          <a class="btn btn-dark btn-lg" href="{% url 'article_list' %}" role="button">Postlarni ko'rish</a>
+          <a class="btn btn-info btn-lg" href="{% url 'cv' %}" role="button">CV</a>
+          <a class="btn btn-warning btn-lg" href="{% url 'portfolio' %}" role="button">Portfolio</a>
+          <a class="btn btn-danger btn-lg" href="{% url 'portfolio_api' %}" role="button">API/portfolio</a>
+
+      </div>
+    </div>
+    <p style="color: #D3D3D3;">*saytdan to'liq foydalanish uchun kompyuterdan (use PC) kirish tavfsiya qilinadi.</p>
+{% endblock content %}

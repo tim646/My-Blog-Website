@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Ro'yxatdan O'tish {% endblock title%}
+
+{% block content %}
+<!--    <h2>Ro'yxatdan o'tish</h2>-->
+<!--<form method="post"> {% csrf_token %}-->
+<!--    {{ form|crispy }}-->
+
+<!--    <button type="submit" class="btn btn-success">Yuborish</button>-->
+<!--</form>-->
+<!--<div class="header-bar">-->
+<!--    <h1>Register</h1>-->
+<!--</div>-->
+
+<!--<div class="card-body">-->
+<!--    <form method="POST">{% csrf_token %}-->
+<!--        <label >{{form.username.label}}</label>-->
+<!--        {{form.username}}-->
+<!--          <label >{{form.password1.label}}</label>-->
+<!--        {{form.password1}}-->
+
+<!--          <label >{{form.password2.label}}</label>-->
+<!--        {{form.password2}}-->
+
+<!--    <input style="margin-top: 10px;" class="button" type="submit" value="Register">-->
+<!--</form>-->
+
+<!--<p>Already have an account?  <a href="{% url 'login' %}">Login</a></p>-->
+<!--</div>-->
+
+
+
+<h2 style="padding: 10px; text-align: center;">Ro'yxatdan o'tish</h2>
+<div class="form-floating mb-3" >
+    <form method="POST">{% csrf_token %}
+<!--  <input type="text" class="form-control" id="floatingInput">-->
+        <h6>Username</h6>
+    <p>{{form.username}}</p>
+
+
+<div class="form-floating">
+<!--  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">-->
+    <h6>Password</h6>
+    <p >{{form.password1}}</p>
+  <h6>Confirm Password</h6>
+    <p >{{form.password2}}</p>
+
+    <input style="margin-top: 10px;" class="button" type="submit" value="Register">
+    </form>
+</div>
+<p>Akkauntingiz <strong>bormi?</strong>  <a href="{% url 'login' %}">Login</a></p>
+</div>
+
+{% endblock content %}
